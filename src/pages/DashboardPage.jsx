@@ -51,6 +51,10 @@ export default function DashboardPage() {
     setIsModalOpen(false);
   };
 
+  const handleLogout = () => {
+    localStorage.clear();
+  };
+
   return (
     <div className="dashboard">
       <header className="dashboard-header">
@@ -59,7 +63,7 @@ export default function DashboardPage() {
           <button onClick={() => setIsModalOpen(true)} className="add-btn">
             Add Project
           </button>
-          <Link to="/" className="logout-link">
+          <Link to="/" className="logout-link" onClick={() => handleLogout()}>
             Logout
           </Link>
         </div>
