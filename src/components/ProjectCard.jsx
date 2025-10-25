@@ -1,13 +1,13 @@
 // src/components/ProjectCard.jsx
 export default function ProjectCard({ project }) {
-  const { name, number, description, thumbnail } = project;
+  const { name, number, description, thumbnailUrl } = project;
 
   return (
     <div className="project-card">
       {/* Thumbnail on the left */}
       <div className="project-thumbnail">
-        {thumbnail ? (
-          <img src={thumbnail} alt={`${name} thumbnail`} />
+        {thumbnailUrl ? (
+          <img src={thumbnailUrl} alt={`${name} thumbnail`} />
         ) : (
           <div className="thumbnail-placeholder">
             <span>No Image</span>
